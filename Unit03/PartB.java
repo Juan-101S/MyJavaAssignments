@@ -1,4 +1,8 @@
 
+/* Juan
+ * 10/15/24
+ * This program uses public enum for days of the week and has the same functions as PartA
+ */
 import java.util.Scanner;
 
 public class PartB {
