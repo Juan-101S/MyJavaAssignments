@@ -24,4 +24,5 @@ hs_err_pid*
 replay_pid*
 
 # for mac users
+*.Ds_Store
 .Ds_Store
