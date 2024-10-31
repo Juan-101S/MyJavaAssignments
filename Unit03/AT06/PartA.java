@@ -18,13 +18,14 @@ public class PartA {
         DayOfWeek dayOfWeek = date.getDayOfWeek();
         int dayNumber = dayOfWeek.getValue();
 
+        System.out.println("          OCTOBER");
         System.out.println(" MON TUE WED THU FRI SAT SUN");
         System.out.println("-----------------------------");
 
         int currMonth = rightNow.getMonthValue();
 
         for (int i = 1; i < dayNumber; i++) {
-            System.out.println("    ");
+            System.out.print("    ");
         }
 
         while (date.getMonthValue() == currMonth) {
