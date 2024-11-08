@@ -14,7 +14,7 @@ public class Question5 {
             total = total + i;
             System.out.println(i);
         }
-        average = total / times;
+        average = (double) total / (double) times;
         System.out.println("The averages of these numbers is: " + average);
     }
 }
