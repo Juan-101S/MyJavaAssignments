@@ -6,6 +6,18 @@ public class PartA {
     private int value = 1;
     private Random random = new Random();
 
+    // Constructor (default)
+    public PartA() {
+        this.value = 2;
+        this.random = new Random();
+    }
+
+    // Constructor (custom value)
+    public PartA(int initialValue) {
+        this.value = initialValue;
+        this.random = new Random();
+    }
+
     public int getValue() {
         return value;
     }
