@@ -1,47 +1,23 @@
-
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.*;
 
-public class PartB {
-
-    public static Color flipColor(Color origColor) {
-        if (origColor == Color.BLUE) {
-            origColor = Color.RED;
-        } else {
-            origColor = Color.BLUE;
-        }
-        return origColor;
-    }
-
-    /*
-     * Change the following method to customize
-     * what is drawn in the JFrame.
-     */
+public class PartC {
     public static void draw(Graphics g) {
-        final int SQUARESIDE = 100;
-        Color c = Color.BLUE;
-        Color q = Color.RED;
+        final double MINTHETA = 0;
+        final double MAXTHETA = 2 * Math.PI;
+        final int STEPS = 10000;
+        final int SCALE = 150;
 
-        for (int i = 0; i < 4; i++) {
-            g.setColor(c);
-            g.fillRect(i * SQUARESIDE, 0, SQUARESIDE, SQUARESIDE);
-            c = flipColor(c);
-        }
-        for (int i = 0; i < 4; i++) {
-            g.setColor(q);
-            g.fillRect(i * SQUARESIDE, 100, SQUARESIDE, SQUARESIDE);
-            q = flipColor(q);
-        }
-        for (int i = 0; i < 4; i++) {
-            g.setColor(c);
-            g.fillRect(i * SQUARESIDE, 200, SQUARESIDE, SQUARESIDE);
-            c = flipColor(c);
-        }
-        for (int i = 0; i < 4; i++) {
-            g.setColor(q);
-            g.fillRect(i * SQUARESIDE, 300, SQUARESIDE, SQUARESIDE);
-            q = flipColor(q);
+        double deltaTheta = (MAXTHETA - MINTHETA) / STEPS;
+        for (double theta = MINTHETA; theta <= MAXTHETA; theta += deltaTheta) {
+            double r = Math.cos(2 * theta);
+            double x = r * Math.cos(theta) * SCALE;
+            double y = r * Math.sin(theta) * SCALE;
+            int pixelX = (int) x + 200;
+            int pixelY = (int) y + 200;
+            g.setColor(Color.RED);
+            g.drawLine(pixelX, pixelY, pixelX, pixelY);
         }
     }
 
