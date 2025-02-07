@@ -8,7 +8,7 @@ public class Yard {
         for (int i = 0; i < yard.length; i++) {
             for (int j = 0; j < yard[0].length; j++) {
                 if (i == 0 || i == yard.length - 1 || j == 0 || j == yard[0].length - 1) {
-                    yard[i][j] = '0';
+                    yard[i][j] = 'R';
                 } else {
                     yard[i][j] = '+';
                 }

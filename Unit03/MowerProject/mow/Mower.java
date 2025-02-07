@@ -87,6 +87,6 @@ public class Mower {
     }
 
     public void cutGrass(Yard yard) {
-        yard.setCellValue(row, column, 'x');
+        yard.setCellValue(row, column, ' ');
     }
 }
