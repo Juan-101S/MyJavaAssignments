@@ -18,7 +18,7 @@ public class Board extends JPanel {
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 
         try {
-            File imgFile = new File("media/Duo.jpg");
+            File imgFile = new File("media/Snoopy.jpg");
             img = ImageIO.read(imgFile);
             setPreferredSize(new Dimension(img.getWidth(), img.getHeight()));
         } catch (Exception e) {
