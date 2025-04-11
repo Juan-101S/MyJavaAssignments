@@ -81,11 +81,12 @@ public class Cannon {
         cannon.play();
     }
 
-    public void fire(Cannon cannon) {
+    public void fire(Cannonball cannonball) {
         double xo = HYPOT * Math.cos(Math.toRadians(Math.abs(angle)));
         double yo = HYPOT * Math.sin(Math.toRadians(Math.abs(angle)));
         double vx = MUZZLE_VELOCITY * Math.cos(Math.toRadians(Math.abs(angle)));
         double vy = -MUZZLE_VELOCITY * Math.sin(Math.toRadians(Math.abs(angle)));
+        cannonball.launch(x + xo, y - yo, vx, vy);
         this.fire();
     }
 
@@ -97,7 +98,8 @@ public class Cannon {
         af.rotate(Math.toRadians(angle), xpivot, ypivot);
         g2d.drawImage(cannonimg, af, null);
         g2d.setColor(Color.PINK);
-        int[] xcoordinates = { x, x - (int) (BASE_WIDTH / 2.0), x + (int) (BASE_WIDTH / 2.0) };
+        int[] xcoordinates = { x, x - (int) (BASE_WIDTH / 2.0), x + (int) (BASE_WIDTH
+                / 2.0) };
         int[] ycoordinates = { y, y + (int) (BASE_HEIGHT / 2.0), y + (int) (BASE_HEIGHT / 2.0) };
         g2d.fillPolygon(xcoordinates, ycoordinates, 3);
         System.out.println(Arrays.toString(xcoordinates));
